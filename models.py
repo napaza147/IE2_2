@@ -98,9 +98,9 @@ class Player(BasePlayer):
     perception = models.IntegerField(label="De la última cajetilla que compró, ¿Recuerda de qué trataba la imagen disuasoria?",
                                   choices=[[0, "No"], [1, "Sí"]], widget=widgets.RadioSelect)
 
-    height = models.IntegerField(label="¿Cuál es tu talla actual? (Cm)", min=0)
+    height = models.FloatField(label="¿Cuál es tu talla actual? (Cm)", min=1)
 
-    weight = models.IntegerField(label="¿Cuál es tu peso actual? (Kg)", min=0)
+    weight = models.FloatField(label="¿Cuál es tu peso actual? (Kg)", min=1)
 
     health_state = models.IntegerField(label="¿Cómo considera su estado de salud actual?",
                                   choices=[[0, "Muy malo"], [1, "Malo"], [2, "Bueno"], [3, "Muy bueno"]], widget=widgets.RadioSelect)
